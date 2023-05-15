@@ -10,7 +10,6 @@ const ConnectWallet = () => {
   const [provider, setProvider] = useState<ethers.providers.Web3Provider | null>(null)
 
   useEffect(() => {
-
     const getProvider = async () => {
       const provider = window.ethereum ? new ethers.providers.Web3Provider(window.ethereum) : null
       setProvider(provider)
@@ -128,7 +127,7 @@ const ConnectWallet = () => {
       )}
       {error && <p className="text-red-500 mt-1 text-sm">{error}</p>}
       {chainId !== null && chainId !== 1 && (
-        <button className="text-blue-400 font-bold" onClick={() => switchToMainnet(provider)}>
+        <button className="text-blue-400 font-bold text-sm" onClick={() => switchToMainnet(provider)}>
           Switch to Mainnet
         </button>
       )}

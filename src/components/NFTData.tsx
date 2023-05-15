@@ -7,7 +7,7 @@ import { GetNFTResponse } from "@/pages/api/nft/[address]"
 const NFTData = () => {
   const [address, setAddress] = useState("")
   const [error, setError] = useState("")
-  const [result, setResult] = useState<GetNFTResponse | null>(null) // TODO: replace any with the correct type
+  const [result, setResult] = useState<GetNFTResponse | null>(null)
   const [isLoading, setIsLoading] = useState(false)
 
   const handleSearch = async (e: React.FormEvent<HTMLFormElement>) => {
